@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ProductList from './components/ProductList';
+import Filter from './components/Filter';
+import Search from './components/Search';
+import ShoppingCart from './components/ShoppingCart';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className=' text-3xl text-center font-semibold my-6'>Product Listing</h1>
+      <div className=' flex md:flex-row flex-col justify-center items-center gap-3'>
+        <Search />
+        <Filter />
+      </div>
+      <ProductList />
+      <ShoppingCart />
     </div>
   );
-}
+};
 
 export default App;
