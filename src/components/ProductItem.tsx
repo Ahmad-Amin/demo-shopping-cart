@@ -40,7 +40,7 @@ const ProductItem: React.FC<ProductProps> = ({ product }) => {
           <div className="flex items-center justify-between">
             <span className="text-xl font-bold text-gray-900 dark:text-white">${product.price}</span>
             {isProductInCart ? (
-              <button className="text-white bg-green-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Added</button>
+              <button disabled className="text-white cursor-not-allowed bg-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Added</button>
             ) : (
               <button
                 onClick={handleAddToCart}
